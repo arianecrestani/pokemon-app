@@ -1,0 +1,12 @@
+.App {
+    font-family: sans-serif;
+    text-align: center;
+  }
+  
+  .card {
+    border-radius: 25px;
+    background-color: rgb(223, 223, 223);
+    padding: 3rem;
+    margin: 3rem;
+  }
+  
