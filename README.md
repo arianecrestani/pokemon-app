@@ -1,1 +1,1 @@
-### Catch the pokemon
+### Catch the pokemon (React)
