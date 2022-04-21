@@ -16,13 +16,13 @@ const Card = ({ id }) => {
   return (
     <div className="card">
       {pokemonDetail && (
-        <>
+        <div>
           <h1>{pokemonDetail.name}</h1>
           <h1>
             {pokemonDetail.height}f - {pokemonDetail.weight}kg
           </h1>
           <img src={pokemonDetail.sprites.front_default} alt="sprite" />
-        </>
+        </div>
       )}
     </div>
   );
