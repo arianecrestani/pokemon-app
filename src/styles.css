@@ -1,4 +1,6 @@
 body {
+  font-variant: small-caps;
+  font-size: larger;
   background-image: linear-gradient(
     309deg,
     rgba(34, 193, 195, 1) 0%,
@@ -39,5 +41,14 @@ body {
     color: white;
     transform: scale(1.05);
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+  }
+  .btn{
+    background-color: rgb(117, 117, 227);
+    outline: none;
+    padding: 1rem;
+    font-size: medium;
+    border-radius: 20px;
+    text-decoration: none;
+    
   }
   

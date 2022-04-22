@@ -21,7 +21,7 @@ export default function App() {
         <div className="App">
             <h2>Start editing to see some magic happen!</h2>
             <h1>Hello CodeSandbox</h1>
-            <button onClick={handleItem}>catch a pokemon</button>
+            <button className="btn" onClick={handleItem}>catch a pokemon</button>
             <div className="item">
             {pokemons.map((item) => (
                 <Card key={item} id={item} />
