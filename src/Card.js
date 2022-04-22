@@ -1,6 +1,13 @@
 import React, { useEffect, useState } from "react";
 import "./styles.css";
 
+
+// const colorPokemon = {
+//   bulbasaur : 'green',
+//   dunsparce:'red'
+// }
+
+
 const Card = ({ id }) => {
   const [pokemonDetail, setPokemonDetail] = useState();
 
@@ -14,7 +21,7 @@ const Card = ({ id }) => {
   }, [id]);
 
   return (
-    <div className="card">
+    <div className='card'>
       {pokemonDetail && (
         <div>
           <h1>{pokemonDetail.name}</h1>
