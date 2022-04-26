@@ -2,15 +2,9 @@ import React, { useEffect, useState } from "react";
 import "./styles.css";
 
 
-// const colorPokemon = {
-//   bulbasaur : 'green',
-//   dunsparce:'red'
-// }
-
-
-const Card = ({ id }) => {
+const Card = ({ id, name }) => {
   const [pokemonDetail, setPokemonDetail] = useState();
-
+  
   useEffect(() => {
     const getPokemon = async (id) => {
       const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
@@ -19,6 +13,15 @@ const Card = ({ id }) => {
     };
     getPokemon(id);
   }, [id]);
+
+  useEffect(() => {
+    const getPokemon = async (name, ) => {
+      const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
+      const data = await response.json();
+      setPokemonDetail(data);
+    };
+    getPokemon(name);
+  }, [name]);
 
   return (
     <div className='card'>
