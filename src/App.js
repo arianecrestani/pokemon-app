@@ -1,10 +1,12 @@
-import { useState } from "react";
-import Card from "./Card";
+import { useState, useEffect } from "react";
 
+import Card from "./Card";
 
 export default function App() {
     const [pokemons, setPokemons] = useState([1]);
     const [input, setInput] = useState("");
+    
+
 
     const handleItem = () => {
         console.log(pokemons);
@@ -19,8 +21,8 @@ export default function App() {
     };
     const handleChange = (e) => {
         if (e.key === "Enter") {
-            setInput(e.target.value)
-            e.target.value = '' 
+            setInput(e.target.value);
+            e.target.value = "";
         }
     };
 
@@ -29,19 +31,22 @@ export default function App() {
             <h2>Start editing to see some magic happen!</h2>
             <h1>Hello CodeSandbox</h1>
             <div className="entryValue">
-         
-            <input placeholder="such a name" className="input" onKeyPress={handleChange}></input>
-            <button className="btn" onClick={handleItem}>
-                catch a pokemon
-            </button>
+                <input
+                    placeholder="such a name"
+                    className="input"
+                    onKeyPress={handleChange}
+                ></input>
+                <button className="btn" onClick={handleItem}>
+                    catch a pokemon
+                </button>
             </div>
-            <div className='item'>
-            {input  && (<Card  name={input} />)}
+            <div className="item">
+                {input && <Card name={input} />}
+
                 {pokemons.map((item) => (
                     <Card key={item} id={item} />
                 ))}
             </div>
-            
         </div>
     );
 }

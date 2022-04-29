@@ -4,6 +4,8 @@ import "./styles.css";
 
 const Card = ({ id, name }) => {
   const [pokemonDetail, setPokemonDetail] = useState();
+ 
+
   
   useEffect(() => {
     const getPokemon = async (id) => {
@@ -15,13 +17,14 @@ const Card = ({ id, name }) => {
   }, [id]);
 
   useEffect(() => {
-    const getPokemon = async (name, ) => {
+    const getPokemon = async (name) => {
       const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
       const data = await response.json();
       setPokemonDetail(data);
     };
     getPokemon(name);
   }, [name]);
+
 
   return (
     <div className='card'>
@@ -35,6 +38,7 @@ const Card = ({ id, name }) => {
         </div>
       )}
     </div>
+  
   );
 };
 
